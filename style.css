@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=REM:wght@600&family=Roboto+Mono:wght@300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'REM', sans-serif;
+    font-family: 'Roboto Mono', monospace; */
+}
+
+body{
+    margin: 0 auto;
+    width: 100%;
+    background-image: url("Image/abstract10.jpg");
+    background-size: cover;
+}
+
+.form-container{
+    margin: 50px;
+    padding: 50px;
+}
+.h-2{
+    text-align: center;
+    font-weight: bolder;
+}
+.form-input{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none
+    
+}
+.form-input:focus{
+    border-bottom: solid 5px dodgerblue;
+
+}
+.col-3{
+    padding: 10px;
+}
+.btn{
+    padding:10px;
+    margin: 5px;
+    border-radius: 30px;
+    border: none;
+    width: 30%;
+    cursor: pointer;
+    position: relative;
+    top: 50px;
+}
+.btn-primary{
+    /* background-color: dodgerblue; */
+    background: linear-gradient(to right, rgb(3, 90, 176), rgb(32, 153, 245));
+    border: double white 7px;
+    color: white;    
+}.btn-primary:hover{
+    /* background-color: dodgerblue; */
+    background: linear-gradient(to left, rgb(3, 90, 176), rgb(32, 153, 245));
+    border: none;
+    color: white;
+}
+
+.btn-danger{
+    background: linear-gradient(to left, rgb(224, 100, 100), rgb(255, 99, 99));
+   color: white;
+   border: double white 7px;
+}.btn-danger:hover{
+    background: linear-gradient(to right, rgb(224, 100, 100), rgba(255, 99, 99, 0));
+   color: white;   
+   border: none;
+}
+label{
+    cursor: pointer;
+    font-weight: bolder;
+    position: relative;
+    right: -40px;
+    top: 20px;
+}
+sup{
+    color: red;
+    font-weight: lighter !important;
+}
+span.errors{
+    color: red !important;
+    font-size: 10px;
+    display: none;
+}
+.icon{
+    background-color: dodgerblue !important;
+    color: white;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Space for the checkbox */
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Style for the checkbox input */
+.custom-checkbox-input {
+    display: none; /* Hide the default checkbox */
+}
+
+/* Style for the checkbox checkmark */
+.custom-checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px; /* Height of the checkbox */
+    width: 20px; /* Width of the checkbox */
+    background-color: white;
+    border: 2px solid DodgerBlue;
+    color: white;
+}
+
+
+/* Style for the checkmark when the checkbox is checked */
+.custom-checkbox-input:checked + .custom-checkbox-checkmark {
+    background-color: DodgerBlue;
+    color: white;
+}
+
+
+
+@media screen and (min-width: 780px) {
+    section{
+        background-image: url("Image/background.jpg");
+        background-size: contain;
+        width: 20%;
+        margin: 0 auto;
+        padding: 0;
+        height: 75em;
+        box-shadow: grey 0px 0px 10px 10px;
+        border-radius: 100% 0px 0px 0px;
+    }
+    .container{
+        background-color: bisque;
+        height: 75em;
+        box-shadow: rgb(255, 255, 255) 0px 10px 0px;
+        border-radius: 0px 0px 100% 0px;
+    }
+    .btn{
+        width: 100% !important;
+        border: none !important;
+        box-shadow: white 0px 2px 2px 0px;
+}
+}
+
+@media screen and (max-width: 2538px) {
+        section{
+        background-color: black;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        height: 80em;
+        box-shadow: grey 0px 0px 10px 10px;
+        border-radius: 100% 0px 0px 0px;
+        }
+        
+    .container{
+        background-color: bisque;
+        height: 80em;
+        box-shadow: rgb(255, 255, 255) 0px 10px 0px;
+        border-radius: 0px 0px 100% 0px;
+    }
+    .btn{
+        width: 100% !important;
+        border: none !important;
+        box-shadow: white 0px 2px 2px 0px;
+    }
+   
+}

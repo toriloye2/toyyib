@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <form id="form-validate" autocomplete="off" method="POST" action="registration.php">
+                <div class="row form-container">
+                    <h2 class="h-2">Registration Form</h2>
+                    <div class="col-3">
+                        <label for="name">First and Last name only <sup>*</sup></label>
+                        <br>
+                        <span class="icon"><i class="fa fa-id-card"></i></span>
+                        <input type="text" name="name" class="form-input" id="name" placeholder="First and last name (middle)" onkeyup="getValues()">
+                        <span id="errorMsgName" class="errors">Please enter your First and last name *</span>
+                    </div>
+                    <div class="col-3">
+                        <label for="username">Username<sup>*</sup></label> 
+                        <br>
+                        <span class="icon"><i class="fa fa-user-circle"></i></span>
+                        <input type="text" name="username" class="form-input" id="username" placeholder="Username" onkeyup="getValues()">
+                        <span id="errorMsgUsername" class="errors">Please enter your username *</span>
+                        <span id="suggest"></span>
+                    </div>
+                    <div class="col-3">
+                        <label for="email">Email <sup>*</sup></label>
+                        <br>
+                        <span class="icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" name="email"  autocomplete="off" class="form-input" id="email" placeholder="Email address"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off/ onkeyup="getValues()">
+                        <div id="suggestions" style="display: none;"></div>
+                        <span id="errorMsgEmail" class="errors">Please enter a valid email *</span>
+                    </div>
+                    <div class="col-3">
+                        <label for="confirmEm">Confirm Email <sup>*</sup></label> 
+                        <br>
+                        <span class="icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" class="form-input" id="confirmEm" placeholder="Retype email address" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off/ onkeyup="getValues()">
+                        <span id="errorMsgEmailConf" class="errors">Email address does not match *</span>
+                    </div>
+                    <div class="col-3">
+                        <label for="phone">Phone<sup>*</sup></label> 
+                        <br>
+                        <span class="icon"><i class="fa fa-phone"></i></span>
+                        <input type="tel" name="phone" class="form-input" id="phone" placeholder="(000) 000-0000" onkeyup="getValues()">
+                        <span id="errorMsgPhone" class="errors">Please enter a valid 10 digit phone number *</span>
+                    </div>
+                    <div class="col-3">
+                        <label for="psw">Choose a pascode<sup>*</sup></label>
+                        <br>
+                        <span class="icon"><i class="fa fa-key"></i></span>
+                        <input type="password" name="password" class="form-input" id="psw" placeholder="Enter pascode" onkeyup="getValues()">
+                        <span id="errorMsgPsw" class="errors">Please choose a passcode *</span>
+                    </div>
+                    <div class="col-3">
+                        <label for="ComfirmPsw">Confirm pascode<sup>*</sup></label>
+                        <br>
+                        <span class="icon"><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-input" id="ComfirmPsw" placeholder="Enter pascode again" onkeyup="getValues()">
+                        <span id="errorMsgConfrmPsw" class="errors">Passcode does not match *</span>
+                    </div>
+                    <div class="col-3">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-input" id="agreeBtn">
+                            <span class="custom-checkbox-checkmark" id="custom-checkbox-checkmark"></span>
+                            <span id="agreeTxt">I agree to the <a href="">terms and conditions</a>  applied</span>
+                        </label>
+                    </div>
+
+                    <div class="row">
+                        <button id="nextBtn" class="nextBtn btn btn-primary" type="submit"> NEXT <i class="fa fa-angle-double-right"></i></button>
+                        <button class="clear btn btn-danger" type="reset" id="clearBtn"> clear all input</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>
